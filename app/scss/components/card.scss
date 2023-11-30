@@ -1,5 +1,35 @@
 @use "../util" as *;
 
 .card {
-  padding: rem(20);
+  &__icon {
+    &--facebook {
+    }
+    &--instagram {
+    }
+    &--twitter {
+    }
+    &--youtube {
+    }
+  }
+
+  &__username {
+  }
+
+  &__count {
+    &--big {
+    }
+
+    &--small {
+    }
+  }
+
+  &__label {
+  }
+
+  &__change {
+    &--up {
+    }
+    &--down {
+    }
+  }
 }
