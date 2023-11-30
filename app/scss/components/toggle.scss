@@ -3,9 +3,10 @@
 
 .toggle {
   display: grid;
-  grid-template-columns: 1fr 3rem;
+  grid-template-columns: repeat(2, 1fr);
   border: none;
   margin: 0;
+  justify-items: center;
 
   label {
     font-size: rem(14);
@@ -15,6 +16,16 @@
     &[for="dark"] {
       line-height: rem(24);
       margin-right: rem(13);
+      grid-column: 1 / 2;
+      justify-self: end;
+    }
+
+    &[for="light"] {
+      margin-left: 10px;
+      line-height: rem(24);
+      margin-right: rem(13);
+      grid-column: 3 / 4;
+      justify-self: start;
     }
   }
 
@@ -22,7 +33,6 @@
     position: relative;
     height: rem(24);
     border-radius: rem(12);
-    overflow: hidden;
   }
 
   input[type="radio"] {
@@ -60,18 +70,12 @@
     width: rem(18);
     height: rem(18);
     border-radius: 50%;
-    background-color: var(--toggle-button);
+    background-color: var(--dark-bg);
     transition: all 150ms ease-in-out;
   }
 
   #light:checked ~ .toggle__button {
     left: calc(100% - 21px);
     right: 3px;
-  }
-
-  #system:checked ~ .toggle__button {
-    left: 50%;
-    right: auto;
-    transform: translate(-50%);
   }
 }
