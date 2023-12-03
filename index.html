@@ -35,7 +35,7 @@
     </style>
   </head>
   <body>
-    <body>
+    <body class="dark">
       <header class="header container">
         <div class="header__title">
           <h1>Social Media Dashboard 🔥🔥🔥🔥🔥</h1>
@@ -43,11 +43,14 @@
         </div>
   
         <fieldset
+
           class="header__toggle toggle"
           aria-label="theme toggle"
           role="radiogroup"
         >
-        <label for="dark">Dark</label>
+<!--         <legend>Dark</legend> -->
+       
+ <label for="dark">Dark Mode <span class="visually-hidden">On</span></label> 
           <div class="toggle__wrapper">
             <input type="radio" name="theme" id="dark" />
             <input type="radio" name="theme" id="light" />
@@ -55,7 +58,7 @@
             <span aria-hidden="true" class="toggle__button"></span>
           </div>
           
-          <label for="light">Light</label>
+    <label for="light" class="visually-hidden" >Light</label>
         </fieldset>
       </header>
   
